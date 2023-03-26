@@ -1,0 +1,94 @@
+﻿
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Londrina Outline">
+
+<style>
+
+
+    div.div-center {
+        background-color: rgb(0, 0, 0);
+        margin: 0;
+    }
+
+    p.p-center {
+        display: flex;
+        justify-content: center;
+    }
+
+    p.company-name {
+        font-size: 56px;
+        color: rgb(255, 255, 255);
+        font-family: "Londrina Outline";
+        font-weight:500;
+        padding-top: 5rem;
+    }
+
+    span {
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+        text-decoration-thickness: 1px;
+    }
+
+    p.company-type {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        padding-top: 0.1vh;
+    }
+
+    /*hr {
+        color: rgb(255, 255, 255);
+        font-size: 56px;
+        width: 400px;
+        justify-content: center;
+        display: flex;
+    }*/
+
+
+    ul.top-menu {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    li.top-menuitem {
+        display: inline-block;
+        justify-content: center;
+        margin: 0vh 0vh 0vh 0vh;
+        padding: 5px 30px;
+        background-color: rgb(131, 37, 37);
+        color: white;
+        text-align:center;
+    }
+
+    img.shopping-bag {
+        height: 20px;
+        width: 20px;
+        margin:5px, 5px
+    }
+
+   /* .shopping-bag {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='white' fill-rule='evenodd'%3E%3Cpath d='M9.494 4.011a.49.49 0 0 1-.489-.492a2.512 2.512 0 0 0-2.503-2.514A2.511 2.511 0 0 0 4 3.519a.49.49 0 1 1-.979 0C3.021 1.59 4.583.021 6.502.021c1.92 0 3.482 1.569 3.482 3.498a.49.49 0 0 1-.49.492z'/%3E%3Cpath d='M12.492 4.011a.49.49 0 0 1-.488-.492c0-1.386-1.119-2.514-2.492-2.514a.49.49 0 0 1-.488-.492a.49.49 0 0 1 .488-.492c1.912 0 3.469 1.569 3.469 3.498a.491.491 0 0 1-.489.492zm.55-.911V16h1.329c.327 0 .594-.254.594-.566V3.626c0-.314-.267-.565-.594-.565l-1.329.039z'/%3E%3Cpath d='M1.645 3.061c-.33 0-.601.252-.601.565v11.808c0 .312.271.566.601.566h10.306l.006-12.939H1.645z'/%3E%3C/g%3E%3C/svg%3E");
+    }*/
+
+</style>
+
+<div class="div-center">
+
+    <p class="p-center company-name">B<span>READ ' N ' MA</span>D</p>
+    <p class="p-center company-type">пекарня</p>
+
+    <ul class="top-menu">
+        <li class="top-menuitem">@Html.ActionLink("Головна", "Index", "Home")</li>
+        @*<li class="top-menuitem"><a href="@Url.Action("Index", "Home")"><span>Головна 2</span></a></li>*@
+        <li class="top-menuitem">@Html.ActionLink("Контакти", "Index", "Contacts")</li>
+        <li class="top-menuitem">@Html.ActionLink("Про нас", "Index", "About")</li>
+        <li class="top-menuitem">@Html.ActionLink("Магазин", "Index", "Shop")</li>
+        <li class="top-menuitem">
+            <a href="@Url.Action("Index", "Shop")">
+                <div>
+                    Кошик 
+                    <svg fill="white" width="20px" height="20px" viewBox="0 0 6.4 6.4" id="Flat" xmlns="http://www.w3.org/2000/svg"><g opacity="0.2"><path d="M0.8 2h4.8V1.4a0.2 0.2 0 0 0 -0.2 -0.2H1a0.2 0.2 0 0 0 -0.2 0.2Z" /></g><g><path d="M5.4 1H1a0.4 0.4 0 0 0 -0.4 0.4v3.6a0.4 0.4 0 0 0 0.4 0.4h4.4a0.4 0.4 0 0 0 0.4 -0.4V1.4a0.4 0.4 0 0 0 -0.4 -0.4Zm0 0.4 0 0.4H1V1.4Zm0 3.6H1V2.2h4.4l0 2.8Z" /><path d="M4.2 2.6a0.2 0.2 0 0 0 -0.2 0.2 0.8 0.8 0 0 1 -1.6 0 0.2 0.2 0 0 0 -0.4 0 1.2 1.2 0 0 0 2.4 0 0.2 0.2 0 0 0 -0.2 -0.2Z" /></g></svg>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
