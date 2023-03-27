@@ -1,13 +1,9 @@
-﻿@model Bakery.Models.Home.Home
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<div style="column-count:3; border:dashed;">
-    @foreach (var product in Model.Products)
-    {
-            @Html.Partial("~/Views/Home/Product.cshtml", product)
-    }
+<div>
+    <vc:shop-preview />
 </div>

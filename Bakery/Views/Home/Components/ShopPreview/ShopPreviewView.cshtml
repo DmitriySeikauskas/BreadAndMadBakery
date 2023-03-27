@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Bakery.Models.Home.Product>
+
+<h4>Cписок продуктов:</h4>
+<div style="column-count:3">
+    @foreach (var product in Model)
+    {
+        <div>
+            <h1>
+                @product.Name
+            </h1>
+            @product.Price
+        </div>
+    }
+</div>
