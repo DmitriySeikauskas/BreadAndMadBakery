@@ -1,4 +1,5 @@
 ﻿using Bakery.Models;
+using Bakery.Models.Home;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,7 +16,16 @@ namespace Bakery.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var products = new[] 
+            {
+                new Product("product 1", 1_300),
+                new Product("product 2", 45),
+                new Product("product 3", 1_650),
+            };
+
+            var model = new Home(products);
+            
+            return View(model);
         }
 
         public IActionResult Privacy()
