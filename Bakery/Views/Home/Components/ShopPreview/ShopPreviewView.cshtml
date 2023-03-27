@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Bakery.Models.Home.Product>
+
+<style>
+    #content {
+        background-color: black;
+    }
+
+    .content {
+        column-count: 3;
+        color:white;
+    }
+
+    .center-text {
+        text-align: center
+    }
+
+    .content-header {
+        text-align: center;
+        color: darkred;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+
+    .content-body {
+        text-align: center;
+        color: white;
+        margin: 2vh 10vh
+    }
+
+    .product-image {
+        align-content:center;
+        height: 40vh;
+        width:  30vh;
+    }
+        
+</style>
+
+<div id="content">
+    <h4 class="content-header">Смаколики, які можуть <br /> здивувати своєю <br />начинкою</h4>
+
+    <h6 class="content-body">
+        Кожен, хто заходить у нашу пекарню знає, що зможе віднайти для себе саме те, що так хочеться: найсмачніші тарти, пончики та круасани, які назавжди залишаться у вашому серці. Наші пекарі використовуютьне лише класичні рецепти різних карїн, а й додають цікаві інгрідієнти, що підкреслюють смаки та додають їм нових ароматів.
+    </h6>
+
+    <div class="content">
+        @foreach (var product in Model)
+        {
+            <p>
+                <img class="product-image" src="@Url.Content($"data:image/png;base64,{product.Image}")" />
+            </p>
+            <h1>
+                @product.Name
+            </h1>
+            @product.Price
+        }
+    </div>
+</div>

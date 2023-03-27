@@ -1,4 +1,5 @@
 ﻿using Bakery.Models;
+using Bakery.Models.Home;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
