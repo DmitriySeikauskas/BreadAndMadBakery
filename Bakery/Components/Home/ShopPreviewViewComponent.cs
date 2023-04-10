@@ -7,15 +7,15 @@ namespace Bakery.Components.Home
 {
     public class ShopPreviewViewComponent : ViewComponent
     {
-        private readonly IReadOnlyCollection<Product> _products;
+        private readonly IReadOnlyCollection<ProductShoppingPreview> _products;
 
         public ShopPreviewViewComponent()
         {
             _products = new[]
             {
-                new Product(1, "product 1", 1_300),
-                new Product(2, "product 2", 45),
-                new Product(3, "product 3", 1_650),
+                new ProductShoppingPreview(1, "product 1", 1_300),
+                new ProductShoppingPreview(2, "product 2", 45),
+                new ProductShoppingPreview(3, "product 3", 1_650),
             };
         }
 

@@ -1,8 +1,8 @@
 namespace Bakery.Models.Home
 {
-    public class Product
+    public class ProductShoppingPreview
     {
-        public Product(int id, string name, double price)
+        public ProductShoppingPreview(int id, string name, double price)
         {
             Id = id;
             Image = GetImage(id);
