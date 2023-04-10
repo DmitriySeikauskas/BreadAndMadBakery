@@ -1,7 +1,7 @@
-﻿using Bakery.Models.Home;
+﻿using AutoMapper;
+using Bakery.Interfaces.Services;
+using Bakery.Models.Home;
 using Microsoft.AspNetCore.Mvc;
-using System.Buffers.Text;
-using System.Net.NetworkInformation;
 
 namespace Bakery.Components.Home
 {
@@ -9,14 +9,9 @@ namespace Bakery.Components.Home
     {
         private readonly IReadOnlyCollection<ProductShoppingPreview> _products;
 
-        public ShopPreviewViewComponent()
+        public ShopPreviewViewComponent(IProductsRepository repository, IMapper mapper)
         {
-            _products = new[]
-            {
-                new ProductShoppingPreview(1, "product 1", 1_300),
-                new ProductShoppingPreview(2, "product 2", 45),
-                new ProductShoppingPreview(3, "product 3", 1_650),
-            };
+            _products = mapper.Map<IReadOnlyCollection<ProductShoppingPreview>>(repository.GetAllProducts().Take(3));
         }
 
         public IViewComponentResult Invoke()
