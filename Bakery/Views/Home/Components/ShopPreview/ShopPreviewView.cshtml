@@ -49,7 +49,7 @@
                 <img class="product-image" src="@Url.Content($"data:image/png;base64,{product.Image}")" />
             </p>
             <h1>
-                @product.Name
+                @Html.ActionLink(product.Name, "GetProduct", "Shop", new { productId = product.Id })
             </h1>
             @product.Price
         }

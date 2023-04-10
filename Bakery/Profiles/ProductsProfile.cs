@@ -11,12 +11,11 @@ namespace Bakery.Profiles
         {
             CreateMap<Product, ProductShoppingPreview>()
                 .ConstructUsing(source => new ProductShoppingPreview(source.Id, source.Name, source.Price, source.Image));
-                //.ForMember(destination => destination.Id, mapperOptions => mapperOptions.MapFrom(product => product.Id))
-                //.ForMember(destination => destination.Name, mapperOptions => mapperOptions.MapFrom(product => product.Name))
-                //.ForMember(destination => destination.Price, mapperOptions => mapperOptions.MapFrom(product => product.Price))
-                //.ForMember(destination => destination.Image, mapperOptions => mapperOptions.MapFrom(product => product.Price));
 
-            
+            CreateMap<Product, ProductReadDto>()
+                .ForMember(destination => destination.Id, mapperOptions => mapperOptions.MapFrom(product => product.Id))
+                .ForMember(destination => destination.Name, mapperOptions => mapperOptions.MapFrom(product => product.Name))
+                .ForMember(destination => destination.Price, mapperOptions => mapperOptions.MapFrom(product => product.Price));
         }
     }
 }
