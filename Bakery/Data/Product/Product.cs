@@ -1,19 +1,22 @@
-namespace Bakery.Models.Home
+﻿namespace Bakery.Data.Product
 {
     public class Product
     {
-        public Product(int id, string name, double price)
-        {
-            Id = id;
-            Image = GetImage(id);
-            Name = name;
-            Price = price;
-        }
+        private int _id;
 
-        public int Id { get; set; }
-        public string Image { get; }
-        public string Name { get; }
-        public double Price { get; }
+        public int Id
+        {
+            get => _id;
+            set
+            {
+                _id = value;
+                Image = GetImage(_id);
+            }
+        }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public string Description { get; set; }
+        public string Image { get; set; }
 
         private static string GetImage(int id)
         {
